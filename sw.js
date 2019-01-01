@@ -1,6 +1,6 @@
-let cacheName = "restaurants-v1";
-let urlsToCache = [
-  "./",
+const cacheName = "restaurants-cache-v1";
+const urlsToCache = [
+  "/",
   "index.html",
   "restaurant.html",
   "css/styles.css",
@@ -23,8 +23,7 @@ let urlsToCache = [
 
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches
-      .open(cacheName)
+    caches.open(cacheName)
       .then(cache => cache.addAll(urlsToCache))
       // .then(self.skipWaiting())
   );
@@ -45,8 +44,8 @@ self.addEventListener("fetch", event => {
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(response => {
+        //if cache hit then return response
         if (response) {
-          // console.log("[ServiceWorker] Found in cache ", event.request.url);
           return response;
         }
         return fetch(event.request);
