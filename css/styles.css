@@ -420,7 +420,7 @@ nav h1 a {
 	}
 }
 @media screen and (max-width: 415px){
-  label {
+  label[for="neighborhoods-select"]{
 		margin-right: 75px;
 	}
 	label[for="cuisines-select"] {
