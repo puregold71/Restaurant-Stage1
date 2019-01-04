@@ -13,8 +13,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	/* background-color: #fdfdfd; */
-	background-color: #3397db
+	background-color: #3397db;
 	margin: 0;
 	position:relative;
 }
@@ -43,9 +42,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 .skip-link {
 	position: absolute;
-	top: -40px;
+	top: -50px;
 	left: 0;
-	background-color: /3b2d2ee;
+	background-color: #b2d2ee;
 	padding: 8px;
 	z-index: 1;
 }
@@ -96,7 +95,7 @@ nav h1 a {
     background-color: #b2d2ee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 88px);
+    width: calc(50% - 80px);
 }
 
 /* Display list items side by side */
@@ -113,7 +112,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: #01447e;
     text-decoration: none;
 }
 
@@ -393,9 +392,7 @@ nav h1 a {
  }
 
 }
-.hidden {
-	display: none;
-}
+
 @media screen and (max-width: 675px) {
 	.filter-options {
 		padding-left: 10px;
